@@ -70,6 +70,7 @@ ul {
 .header {
     width: 100%;
     padding: 20px 0;
+    position: relative; /* Added to contain absolute mobile nav */
 }
 
 .nav-wrapper {
@@ -129,6 +130,19 @@ ul {
     height: 2px;
     background: var(--primary-green);
     transition: 0.3s;
+}
+
+/* Hamburger Active State */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
 }
 
 .hero {
@@ -214,8 +228,35 @@ ul {
 }
 
 @media (max-width: 992px) {
+    .top-section-bg {
+        background-position: 85% bottom; /* Move bottle image to the right */
+    }
+
+    .nav-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .desktop-nav {
         display: none;
+    }
+
+    .desktop-nav.active {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        padding: 30px 24px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        z-index: 99;
+    }
+
+    .desktop-nav.active ul {
+        flex-direction: column;
+        gap: 20px;
     }
 
     .hamburger {
@@ -936,6 +977,18 @@ thead .col-qualities {
     text-decoration: underline;
 }
 
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 60px;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
 /* --- RESPONSIVE ADJUSTMENTS --- */
 @media (max-width: 992px) {
     .collection-section { grid-template-columns: 1fr; }
@@ -947,4 +1000,60 @@ thead .col-qualities {
     .footer-links-grid { flex-direction: column; gap: 30px; }
     .newsletter-form { flex-direction: column; }
     .btn-subscribe { padding: 14px; }
+    
+    /* Fix Mobile Overflow & White Space Issues */
+    .hero {
+        align-items: flex-start;
+        padding-top: 40px;
+        padding-bottom: 0;
+    }
+
+    .hero .container {
+        margin-left: auto;
+        margin-top: 0;
+        padding: 0 16px;
+    }
+
+    .hero-title {
+        font-size: 42px; /* Scale down for mobile */
+        white-space: normal; /* Allow text to wrap naturally! */
+        margin-bottom: 24px;
+        letter-spacing: -1px;
+    }
+
+    .award-badge {
+        white-space: normal; /* Allow badge to wrap */
+        padding: 10px 20px;
+        font-size: 13px;
+        text-align: left;
+    }
+
+    .hero-stats {
+        flex-wrap: wrap; /* Let the numbers stack if they run out of room */
+        gap: 20px;
+    }
+
+    .stat h2 {
+        font-size: 46px; /* Balance the huge numbers */
+    }
+    
+    .nav-actions {
+        gap: 12px;
+    }
+
+    .top-section-bg {
+        background-position: right bottom; /* Ensures the bottle isn't cropped out on narrow screens */
+    }
+
+    /* Provide a visual cue for the horizontal scrolling table */
+    .table-responsive::before {
+        content: '← Swipe horizontally to see all brands →';
+        display: block;
+        text-align: center;
+        width: 100%;
+        font-size: 12px;
+        color: #777;
+        margin-bottom: 16px;
+        font-weight: 500;
+    }
 }

@@ -1,26 +1,25 @@
-# GTG Perfumes - Landing Page
+# GTG Perfumes
 
-A premium, modern landing page built for a luxury perfume brand. The goal of this project was to design an elegant and highly interactive frontend using just core web technologies—no heavy frameworks required.
+This is a demo landing page for a premium perfume brand. I built this as a technical assignment for a company to showcase my frontend development skills.
 
-## Key Features
+It's a clean, modern project made using only core web technologies—no heavy frameworks, just solid HTML, CSS, and JavaScript.
 
-- **Interactive Gallery:** A custom image slider that seamlessly syncs up with the product selection options and decorative thumbnails.
-- **Dynamic Subscription Form:** Users can smoothly toggle between Single and Double subscription packages. Selecting different fragrances updates the "Add to Cart" logic in real-time.
-- **Sleek Premium Aesthetic:** Built with a rich dark-green color palette, smooth gradients, thin borders, and clean typography (using the Inter font).
-- **Responsive Layout:** Structured cleanly with Flexbox and CSS Grid so it works beautifully across devices.
+### Live Demo
+Check out the deployed site here: [gtg-perfumes-website.netlify.app](https://gtg-perfumes-website.netlify.app)
 
-## 🛠 Tech Stack
-- HTML5
-- CSS3 (Vanilla CSS, custom CSS variables)
-- Vanilla JavaScript (DOM manipulation, event listeners)
+### Features
+* **Fully Mobile Responsive:** The layout adjusts perfectly for phones, tablets, and desktops.
+* **Interactive Gallery:** A custom-built slider to browse different perfume bottles.
+* **Subscription Form:** Smoothly switch between single/double plans and pick your fragrances.
+* **Premium Design:** A high-end look with smooth animations and a professional green theme.
 
-## How to Run
+### Tech Stack
+* HTML5
+* CSS3 (Vanilla)
+* Vanilla JavaScript
 
-Since this is a straightforward static site without a build step, it's super easy to run locally!
-
-1. Clone or download the repository.
-2. Open the project directory.
-3. Simply launch `index.html` in any web browser, or use an extension like VSCode's **Live Server** for the best development experience.
+### How to Run
+Simply open `index.html` in any web browser. No installation or build steps required!
 
 ---
-*Built as a portfolio showcase for frontend design, styling, and JavaScript logic.*
+**Note:** This project was created specifically as a technical demonstration for a company assignment to show my proficiency in responsive design and UI implementation.

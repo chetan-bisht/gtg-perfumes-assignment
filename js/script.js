@@ -2,9 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- 1. MOBILE MENU LOGIC ---
     const hamburgerBtn = document.getElementById("hamburger-btn");
+    const nav = document.querySelector(".desktop-nav");
+    
     hamburgerBtn.addEventListener("click", () => {
         hamburgerBtn.classList.toggle("active");
-        // Navigation toggle logic will go here
+        nav.classList.toggle("active");
     });
 
 
