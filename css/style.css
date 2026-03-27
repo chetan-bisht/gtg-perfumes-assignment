@@ -1015,7 +1015,7 @@ thead .col-qualities {
     }
 
     .hero-title {
-        font-size: 42px; /* Scale down for mobile */
+        font-size: 32px; /* Reduced for better mobile fit */
         white-space: normal; /* Allow text to wrap naturally! */
         margin-bottom: 24px;
         letter-spacing: -1px;
@@ -1034,7 +1034,11 @@ thead .col-qualities {
     }
 
     .stat h2 {
-        font-size: 46px; /* Balance the huge numbers */
+        font-size: 36px; /* Reduced for better mobile fit */
+    }
+
+    .stat p {
+        font-size: 14px; /* Reduced for better mobile fit */
     }
     
     .nav-actions {
