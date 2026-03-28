@@ -981,12 +981,28 @@ thead .col-qualities {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     margin-top: 60px;
     padding: 30px 0;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .footer-bottom p {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.6);
+}
+
+.dev-credit {
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 /* --- RESPONSIVE ADJUSTMENTS --- */
